@@ -1,6 +1,17 @@
+{% extends 'portfolio/base.html' %}
+
+
+{% block content %}
+
 this is portfolio
 <br>
 {% load static %}
+
+
+<a href="{% url 'blog:all_blogs' %}">
+ BLOG
+</a>
+</br>
 <img src="{% static 'portfolio/prof.png' %}" alt="game over">
 
 {% for project in projects %}
@@ -18,3 +29,7 @@ this is portfolio
 
 
 {% endfor %}
+
+
+
+{% endblock %}
